@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">Note details</div>
+				<div class="card-body">
+					<h1 class="fs-3">{{ note.title }}</h1>
+					<p>{{ note.text }}</p>
+				</div>
+				<div class="card-footer">
+					<a href="{% url 'notes.list' %}" class="btn btn-sm btn-primary">Back</a>
+					<a href="{% url 'note.update' pk=note.id %}" class="btn btn-sm btn-warning">Edit</a>
+					<a href="{% url 'note.delete' pk=note.id %}" class="btn btn-sm btn-danger">Delete</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col">
+			<div class="home-holder text-center">
+				<h1 class="fs-1"> Hello, World </h1>
+				<p class="fs-4">Welcome to KNR's notes app</p>
+				<a href="{% url 'notes.list' %}" class="btn btn-success btn-sm">Go to notes app</a>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

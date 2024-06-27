@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="logout-text text-center">
+            <h1 class="fs-3">Hope to see you again soon!</h1>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <input type="submit" class="btn btn-sm btn-danger" value="Logout">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
